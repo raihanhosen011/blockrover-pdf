@@ -24,7 +24,7 @@ const Download = () => {
                 onClick={() => handleDownload()}
                 className='uppercase bg-gradient-to-r from-green-600 to-green-400  text-white px-[20px] font-semibold py-[9px] rounded-[5px] cursor-pointer'
             >
-                Show 
+                Download
             </button>
         </div>
     )

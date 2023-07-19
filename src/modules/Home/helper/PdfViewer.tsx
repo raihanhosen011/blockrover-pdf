@@ -14,7 +14,7 @@ function PdfViewer() {
     }
   }, []);
 
-  return <div ref={pdfViewerContainerRef} style={{ height: '100vh' }}></div>;
+  return <div className='hidden sm:block' ref={pdfViewerContainerRef} style={{ height: '100vh' }}></div>;
 }
 
 export default PdfViewer;
