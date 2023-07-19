@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <>
       <PdfViewer />
-      {/* <Download /> */}
+      <Download />
     </>
   )
 }
