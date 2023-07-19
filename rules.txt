@@ -1,0 +1,6 @@
+/* ------ Try follow these rules ----- */
+
+1. Write readable code. that everyone can easly understand your code
+2. use commentOut before writing code. mention that what's the work of these code's
+3. make more component for readable code.
+4. Do follow the rules of - DRY (Don't repeat yourselft). That means Do'nt repeat code.
