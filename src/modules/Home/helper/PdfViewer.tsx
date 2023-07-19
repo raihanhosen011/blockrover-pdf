@@ -1,14 +1,20 @@
-import { useEffect } from 'react';
-import PDFObject from 'pdfobject';
+import { useEffect, useRef } from 'react';
 
 function PdfViewer() {
+  const pdfViewerContainerRef = useRef<HTMLDivElement | null>(null);
+
   useEffect(() => {
-    PDFObject.embed('/blockrover-whitepaper.pdf', '#pdf-container', {
-      pdfOpenParams: { navpanes: 0 }
-    });
+    if (pdfViewerContainerRef.current) {
+      const iframe = document.createElement('iframe');
+      iframe.src = '/blockrover-whitepaper.pdf';
+      iframe.frameBorder = '0';
+      iframe.width = '100%';
+      iframe.height = '100%';
+      pdfViewerContainerRef.current.appendChild(iframe);
+    }
   }, []);
 
-  return <div id="pdf-container" style={{ height: '100vh' }}></div>;
+  return <div ref={pdfViewerContainerRef} style={{ height: '100vh' }}></div>;
 }
 
 export default PdfViewer;
